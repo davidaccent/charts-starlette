@@ -12,18 +12,18 @@ class Home(HTTPEndpoint):
 
 class Matrix(HTTPEndpoint):
     async def get(self, request):
-        x = ""
-        y = ""
 
 
         template = "matrix.html"
-        context = {"request": request, "x": x, "y": y}
+        context = {"request": request}
         return templates.TemplateResponse(template, context)
     
     async def post(self, request):
         x = self.request.get["x"]
         y = self.request.get["y"]
 
+        data = dynamic_table(x, y)
+
         template = "matrix.html"
-        context = {"request": request, "x": x, "y": y}
+        context = {"request": request, "matrix":data}
         return templates.TemplateResponse(template, context)

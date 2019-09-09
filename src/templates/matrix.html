@@ -9,8 +9,9 @@
         <input type="text" name="y">
         <button type="submit" class="button button-primary">Submit</button> 
     </form>
-    <h3>{{ x }}{{ y }}</h3>
-
+    {% for i in matrix %}
+    <h3>{{ i }}</h3>
+    {% endfor %}
 </div>
 
 {% endblock %}
