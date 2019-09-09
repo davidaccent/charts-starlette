@@ -1,5 +1,7 @@
 import numpy as np
 
+async def dynamic_table(x, y):
 
-a = np.array([[1,2,3],[2,3,4]])
-print(a)
+    a = np.array([x,y])
+    
+    return(a)

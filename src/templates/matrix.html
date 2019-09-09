@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container my-1h">
+    <h3>Create Dynamic Table:</h3>
+    <form>
+        <input type="text" name="x">
+        <input type="text" name="y">
+        <button type="submit" class="button button-primary">Submit</button> 
+    </form>
+    <h3>{{ x }}{{ y }}</h3>
+
+</div>
+
+{% endblock %}
