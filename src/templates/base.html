@@ -17,7 +17,7 @@
     {% block header %}
     <header class="py-1">
         <div class="container d-flex">
-            <div class="h2 m-0"><a href="/">Example</a></div>
+            <div class="h2 m-0"><a href="/">Dynamic Example</a></div>
             <div class="ml-auto">
                 {% if request.user.is_authenticated %}
                 <a href="/admin">Admin</a>
@@ -33,6 +33,10 @@
     </header>
     {% endblock %}
     {% block content %}{% endblock %}
+    {% if not request.user.is_authenticated %}
+    <div class="container my-1h">
+        <h3>Please Login for Admin Access</h3>
+    {% endif %}
     {% block extra_js %}{% endblock %}
     </body>
 </html>
