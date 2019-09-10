@@ -26,7 +26,7 @@ app = Starlette(debug=settings.DEBUG)
 
 # routes
 app.add_route("/", endpoints.Home, methods=["GET"], name="home")
-app.add_route("/matrix", endpoints.Matrix, methods=["GET"], name="matrix")
+app.add_route("/table", endpoints.Table, methods=["GET"], name="table")
 
 # sub apps
 app.mount(path="/admin", app=admin.adminsite, name=admin.adminsite.name)
