@@ -15,10 +15,14 @@
     <div class="container">
         <div class="row">
             <div class="col"><canvas id="barChart"></canvas></div>
-            <div class="col"><canvas id="pieChart"></canvas></div>
+            <div class="col"><canvas id="radarChart"></canvas></div>
+            <!--<div class="col"><canvas id="horizontalChart"></canvas></div>-->
         </div>
+        <div class="row"></br></div>
         <div class="row">
+            <div class="col"><canvas id="bubbleChart"></canvas></div>
             <div class="col"><canvas id="lineChart"></canvas></div>
+            <!--<div class="col"><canvas id="pieChart"></canvas></div>-->
         </div>
     </div>
 </div>
@@ -26,7 +30,10 @@
 
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-{% include 'barchart.html' %}
-{% include 'piechart.html' %}
-{% include 'linechart.html' %}
+{% include 'chart_bar.html' %}
+{% include 'chart_bubble.html' %}
+{% include 'chart_pie.html' %}
+{% include 'chart_line.html' %}
+{% include 'chart_radar.html' %}
+{% include 'chart_horizontal.html' %}
 {% endblock %}
